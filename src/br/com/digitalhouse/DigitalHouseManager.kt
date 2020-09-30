@@ -112,6 +112,11 @@ class  DigitalHouseManager() {
 
 
 
+    //CONSULTAR O CURSO QUE ESTA MATRICULADO
+    fun consultarCursoCadastrado(aluno: Aluno,matricula: Matricula){
+        
+    }
+
 }
 
 
