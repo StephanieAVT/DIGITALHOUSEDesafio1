@@ -15,7 +15,7 @@ fun main() {
     dh.registrarAluno("Maria","Alice",2)
     dh.registrarAluno("Valentina","Maria",3)
     dh.registrarAluno("Joao","Vitor",4)
-
+    dh.registrarAluno("Rafael","A",5)
 
 
 
@@ -47,8 +47,15 @@ fun main() {
 
 
     //Matricular 3 alunos android
-    dh.matricularAluno(2,2002)
-    dh.matricularAluno(4,2002)
     dh.matricularAluno(3,2002)
+    dh.matricularAluno(4,2002)
+    dh.matricularAluno(5,2002)
+
+
+    //Consultar
+    println("==========")
+    dh.consultarCursoCadastrado(2)
+
+
 
 }

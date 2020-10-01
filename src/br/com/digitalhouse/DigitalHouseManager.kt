@@ -3,6 +3,7 @@ package br.com.digitalhouse
 
 import java.util.*
 import javax.xml.crypto.Data
+import kotlin.collections.contains as contains
 
 
 class  DigitalHouseManager() {
@@ -59,8 +60,6 @@ class  DigitalHouseManager() {
 
 
     fun matricularAluno(codigoAluno: Int, codigoCurso: Int){
-
-
         var aluno1 = Aluno(codigoAluno = codigoAluno)
         var curso1 = Curso(codigoCurso = codigoCurso)
 
@@ -113,10 +112,27 @@ class  DigitalHouseManager() {
 
 
     //CONSULTAR O CURSO QUE ESTA MATRICULADO
-    fun consultarCursoCadastrado(aluno: Aluno,matricula: Matricula){
-        
+    fun consultarCursoCadastrado(codigoAluno: Int) {
+        var aluno1 = Aluno(codigoAluno = codigoAluno)
+        var curso1 = Curso()
+
+        for (aluno in listaAlunos) {
+            if (aluno.codigoAluno == codigoAluno) {
+                aluno1 = aluno
+                for (curso in listaCursos) {
+                    if (curso.listaAlunosMatriculados.contains(aluno1)) {
+                        curso1 = curso
+                        println("Aluno de codigo: $codigoAluno encontrado na lista de alunos do curso: ${curso1.nome}!")
+                    }
+                }
+
+            }
+        }
     }
 
-}
+
+    }
+
+
 
 
