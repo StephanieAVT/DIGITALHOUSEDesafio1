@@ -7,8 +7,6 @@ fun main() {
 
     val dh = DigitalHouseManager()
 
-
-
     //REGISTRO DE ALUNOS
     println("===REGISTRO DE ALUNOS=====")
     dh.registrarAluno("Enzo","Gabriel",1)
@@ -16,7 +14,6 @@ fun main() {
     dh.registrarAluno("Valentina","Maria",3)
     dh.registrarAluno("Joao","Vitor",4)
     dh.registrarAluno("Rafael","A",5)
-
 
 
     //REGISTRO DE PROFS
@@ -41,7 +38,6 @@ fun main() {
 
     //Matricular 2 alunos full stack
     println("===MATRICULAS=====")
-
     dh.matricularAluno(1,2001)
     dh.matricularAluno(2,2001)
 
@@ -53,7 +49,7 @@ fun main() {
 
 
     //Consultar
-    println("==========")
+    println("===CONSULTA DE UM ALUNO===")
     dh.consultarCursoCadastrado(2)
 
 
